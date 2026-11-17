@@ -7,6 +7,7 @@ adduser truenas_admin lpadmin
 cupsctl --remote-any --remote-admin --share-printers
 service cups restart
 # Add printer from https://printer:631
-vim /etc/cups/ppd/HP_LaserJet_1100.ppd
+wget -O /etc/cups/ppd/HP_LaserJet_1100.ppd https://raw.githubusercontent.com/linusemr618/homeserver_misc/refs/heads/main/printer/HP_LaserJet_1100.ppd
+#vim /etc/cups/ppd/HP_LaserJet_1100.ppd
 service cups restart
 ```
